@@ -42,7 +42,9 @@ v_num = 25
 ## 解决的数学模型
 
 经典VRPTW问题的模型构建，
-请参考[Jean-François Cordeau (2002)](https://doi.org/10.1137/1.9780898718515.ch7)，
+请参考[Jean-François Cordeau (2002)](https://doi.org/10.1137/1.9780898718515.ch7
+        
+        )，
 同时，还参考了微信公众号运小筹的[此篇文章](https://mp.weixin.qq.com/s/tF-ayzjpZfuZvelvItuecw)。
 
 ### 模型符号
@@ -76,7 +78,7 @@ $$
 #### 一个顾客只能被一辆车服务一次
 
 $$
-\sum_{k\in K}\,\sum_{j\in \Delta^{+}(i)}x_{ijk} = 1,\quad\forall i \in N
+\sum_{k\in K}\sum_{j\in \Delta^{+}(i)}x_{ijk} = 1,\quad\forall i \in N
 \tag{2}
 $$
 
@@ -94,7 +96,7 @@ $$
 #### 流守恒约束
 
 $$
-\sum_{i\in \Delta^-(j)}x_{ijk} = \sum_{i\in \Delta^+(j)}x_{jik},\quad \forall k\in K ,\,j\in N
+\sum_{i\in \Delta^-(j)}x_{ijk} = \sum_{i\in \Delta^+(j)}x_{jik},\quad \forall k\in K ,j\in N
 \tag{4}
 $$
 
@@ -112,7 +114,7 @@ $$
 #### 时间关系推导
 
 $$
-x_{ijk}(w_{ik}+s_i+t_{ij}-w_{jk}) \le 0,\quad\forall k\in K,\,(i,j)\in A
+x_{ijk}(w_{ik}+s_i+t_{ij}-w_{jk}) \le 0,\quad\forall k\in K,(i,j)\in A
 \tag{6}
 $$
 
@@ -121,14 +123,14 @@ $$
 #### 时间窗约束
 
 $$
-a_i\sum_{j\in \Delta^+(i)}x_{ijk} \le w_{ik} \le b_i\sum_{j\in \Delta^+(i)}x_{ijk} ,\quad \forall k \in K,\,i\in N
+a_i\sum_{j\in \Delta^+(i)}x_{ijk} \le w_{ik} \le b_i\sum_{j\in \Delta^+(i)}x_{ijk} ,\quad \forall k \in K,i\in N
 \tag{7}
 $$
 
 理解：若车辆 $k$不服务节点 $i$，则 $k$在 $i$开始服务的时间点为 $0$。若 $k$服务 $i$，则应该在时间窗范围内服务。
 
 $$
-E\le w_{ik}\le L,\quad \forall k \in K ,\, i\in \{0,n+1\}
+E\le w_{ik}\le L,\quad \forall k \in K , i\in \{0,n+1\}
 \tag{8}
 $$
 
@@ -146,7 +148,7 @@ $$
 #### 0-1变量约束
 
 $$
-x_{ijk} \in \{0,1\},\quad \forall k\in K,\,(i,j)\in A
+x_{ijk} \in \{0,1\},\quad \forall k\in K,(i,j)\in A
 \tag{10}
 $$
 
@@ -155,7 +157,7 @@ $$
 注意到，公式6为非线性。由于 $x_{ijk}$是0-1变量，因此可以进行下面的转换：
 
 $$
-w_{ik}+s_i+t_{ij}-w_{jk} \le (1-x_{ijk})M,\quad\forall k\in K,\,(i,j)\in A
+w_{ik}+s_i+t_{ij}-w_{jk} \le (1-x_{ijk})M,\quad\forall k\in K,(i,j)\in A
 \tag{6a}
 $$
 
