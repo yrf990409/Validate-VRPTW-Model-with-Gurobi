@@ -41,7 +41,9 @@ v_num = 25
 
 ## 解决的数学模型
 
-经典VRPTW问题的模型构建，请参考[Jean-François Cordeau (2002)](https://doi.org/10.1137/1.9780898718515.ch7)，同时，还参考了微信公众号运小筹的[此篇文章](https://mp.weixin.qq.com/s/tF-ayzjpZfuZvelvItuecw)。
+经典VRPTW问题的模型构建，请参考[Jean-François Cordeau (2002)](https://doi.org/10.1137/1.9780898718515.ch7
+        
+        )，同时，还参考了微信公众号运小筹的[此篇文章](https://mp.weixin.qq.com/s/tF-ayzjpZfuZvelvItuecw)。
 
 ### 模型符号
 
@@ -49,17 +51,21 @@ VRP问题基于一个完全有向图 $G=(V,A)$，其中 $V$是点的集合， $A
 
 此外，仓库的时间窗 $[a_0,b_0]=[a_{n+1},b_{n+1}]=[E,L]$是问题中时间的上下界，仓库的需求量为 $0$，仓库的服务时长为 $0$，即 $d_0 = d_{n+1}=s_0=s_{n+1}=0$。
 
-[Jean-François Cordeau (2002)](https://doi.org/10.1137/1.9780898718515.ch7)提出了一些消减不可行弧即保证可行性的方法，参见其文章的7.2节。相同的方法在[Schneider(2016)](https://doi.org/10.1016/j.ejor.2015.09.015)也被采用。如感兴趣可参考上述两篇文章中的不可行弧判断方法，这里不详细赘述。
+[Jean-François Cordeau (2002)](https://doi.org/10.1137/1.9780898718515.ch7
+        
+        )提出了一些消减不可行弧即保证可行性的方法，参见其文章的7.2节。相同的方法在[Schneider(2016)](https://doi.org/10.1016/j.ejor.2015.09.015
+        
+        )也被采用。如感兴趣可参考上述两篇文章中的不可行弧判断方法，这里不详细赘述。
 
 模型的决策变量如下：
 
--  $x_{ijk},\,\, \forall (i,j)\in A,k\in K$为0-1决策变量，即车辆 $k\in K$经过弧 $(i,j)\in A$，取值则为1，否则为0。
--  $w_{ik},\,\, \forall i\in V,k\in K$表示车辆 $k\in K$开始服务顾客 $i\in V$的时间点。
+-  $x_{ijk},\quad \forall (i,j)\in A,k\in K$为0-1决策变量，即车辆 $k\in K$经过弧 $(i,j)\in A$，取值则为1，否则为0。
+-  $w_{ik},\quad \forall i\in V,k\in K$表示车辆 $k\in K$开始服务顾客 $i\in V$的时间点。
 
 ### 目标函数
 
 $$
-{\rm{min}}\,\,\ \sum_{k\in K}\sum_{(i,j)\in A}c_{ij}x_{ijk}
+{\rm{min}}\quad\ \sum_{k\in K}\sum_{(i,j)\in A}c_{ij}x_{ijk}
 \tag{1}
 $$
 
@@ -72,7 +78,7 @@ $$
 #### 一个顾客只能被一辆车服务一次
 
 $$
-\sum_{k\in K}\,\sum_{j\in \Delta^{+}(i)}x_{ijk} = 1,\,\,\forall i \in N
+\sum_{k\in K}\,\sum_{j\in \Delta^{+}(i)}x_{ijk} = 1,\quad\forall i \in N
 \tag{2}
 $$
 
@@ -81,7 +87,7 @@ $$
 #### 所有车辆必须出发
 
 $$
-\sum_{j\in \Delta^+(0)}x_{0jk}= 1,\,\, \forall k \in K
+\sum_{j\in \Delta^+(0)}x_{0jk}= 1,\quad \forall k \in K
 \tag{3}
 $$
 
@@ -90,7 +96,7 @@ $$
 #### 流守恒约束
 
 $$
-\sum_{i\in \Delta^-(j)}x_{ijk} = \sum_{i\in \Delta^+(j)}x_{jik},\,\, \forall k\in K ,\,j\in N
+\sum_{i\in \Delta^-(j)}x_{ijk} = \sum_{i\in \Delta^+(j)}x_{jik},\quad \forall k\in K ,\,j\in N
 \tag{4}
 $$
 
@@ -99,7 +105,7 @@ $$
 #### 所有车辆必须回到配送中心
 
 $$
-\sum_{i\in \Delta^-(n+1)}x_{i,n+1,k}=1,\,\, \forall k\in K
+\sum_{i\in \Delta^-(n+1)}x_{i,n+1,k}=1,\quad \forall k\in K
 \tag{5}
 $$
 
@@ -108,7 +114,7 @@ $$
 #### 时间关系推导
 
 $$
-x_{ijk}(w_{ik}+s_i+t_{ij}-w_{jk}) \le 0,\,\,\forall k\in K,\,(i,j)\in A
+x_{ijk}(w_{ik}+s_i+t_{ij}-w_{jk}) \le 0,\quad\forall k\in K,\,(i,j)\in A
 \tag{6}
 $$
 
@@ -117,21 +123,23 @@ $$
 #### 时间窗约束
 
 $$
-a_i\sum_{j\in \Delta^+(i)}x_{ijk} \le w_{ik} \le b_i\sum_{j\in \Delta^+(i)}x_{ijk} ,\,\, \forall k \in K,\,i\in N
+a_i\sum_{j\in \Delta^+(i)}x_{ijk} \le w_{ik} \le b_i\sum_{j\in \Delta^+(i)}x_{ijk} ,\quad \forall k \in K,\,i\in N
 \tag{7}
 $$
 
 理解：若车辆 $k$不服务节点 $i$，则 $k$在 $i$开始服务的时间点为 $0$。若 $k$服务 $i$，则应该在时间窗范围内服务。
+
 $$
-E\le w_{ik}\le L,\,\, \forall k \in K ,\, i\in \{0,n+1\}
+E\le w_{ik}\le L,\quad \forall k \in K ,\, i\in \{0,n+1\}
 \tag{8}
 $$
+
 理解：问题的时间上下界，每辆车 $k\in K$出发和回到仓库的时间应在仓库的营业范围之内。
 
 #### 容量约束
 
 $$
-\sum_{i\in N}d_i\sum_{j\in \Delta^+(i)}x_{ijk}\le C,\,\, \forall k \in K
+\sum_{i\in N}d_i\sum_{j\in \Delta^+(i)}x_{ijk}\le C,\quad \forall k \in K
 \tag{9}
 $$
 
@@ -140,7 +148,7 @@ $$
 #### 0-1变量约束
 
 $$
-x_{ijk} \in \{0,1\},\,\, \forall k\in K,\,(i,j)\in A
+x_{ijk} \in \{0,1\},\quad \forall k\in K,\,(i,j)\in A
 \tag{10}
 $$
 
@@ -148,7 +156,7 @@ $$
 
 注意到，公式6为非线性。由于 $x_{ijk}$是0-1变量，因此可以进行下面的转换：
 $$
-w_{ik}+s_i+t_{ij}-w_{jk} \le (1-x_{ijk})M,\,\,\forall k\in K,\,(i,j)\in A
+w_{ik}+s_i+t_{ij}-w_{jk} \le (1-x_{ijk})M,\quad\forall k\in K,\,(i,j)\in A
 \tag{6a}
 $$
 其中， $M$为一个很大的正数。
