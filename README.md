@@ -71,7 +71,7 @@ $$
 
 在定义约束前，着重强调VRPTW问题基于完全有向图，因此定义两个集合 $\Delta^{+}(i)$表示从 $i$出发能到达的点集，即满足 $(i,j)\in A$的 $j$的集合，同理定义 $\Delta^{-}(i)$，表示能到达 $i$的点的集合，即满足 $(j,i)\in A$的 $j$的集合。
 
-定义 $N = V \backslash \left0，n+1 
+定义 $N = V \backslash \{0，n+1 
 ight$为客户点的集合。
 
 #### 一个顾客只能被一辆车服务一次
@@ -129,7 +129,7 @@ $$
 理解：若车辆 $k$不服务节点 $i$，则 $k$在 $i$开始服务的时间点为 $0$。若 $k$服务 $i$，则应该在时间窗范围内服务。
 
 $$
-E\le w_{ik}\le L,\quad \forall k \in K , i\in \left0,n+1
+E\le w_{ik}\le L,\quad \forall k \in K , i\in \{0,n+1
 ight
 \tag{8}
 $$
@@ -148,7 +148,7 @@ $$
 #### 0-1变量约束
 
 $$
-x_{ijk} \in \left0,1
+x_{ijk} \in \{0,1
 ight,\quad \forall k\in K,(i,j)\in A
 \tag{10}
 $$
@@ -164,7 +164,7 @@ $$
 
 其中， $M$为一个很大的正数。
 
-[Jean-François Cordeau (2002)](https://doi.org/10.1137/1.9780898718515.ch7)指出， $M$实际上是一个与 $(i,j)$相关的数，记为 $M_{ij}$，有 $M_{ij} = {\rm{max}} \left b_i+s_i+t_{ij}-a_j,0 
+[Jean-François Cordeau (2002)](https://doi.org/10.1137/1.9780898718515.ch7)指出， $M$实际上是一个与 $(i,j)$相关的数，记为 $M_{ij}$，有 $M_{ij} = {\rm{max}} \{ b_i+s_i+t_{ij}-a_j,0 
 ight $。在这里为了简化，直接使用了 $M$。
 
 ## 结果输出
