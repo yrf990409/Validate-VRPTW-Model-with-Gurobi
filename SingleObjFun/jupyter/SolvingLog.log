@@ -64,3 +64,187 @@ Solution count 2: 828.937 1035.98
 
 Optimal solution found (tolerance 1.00e-02)
 Best objective 8.289368669428e+02, best bound 8.266995160779e+02, gap 0.2699%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Mon Dec  4 12:41:17 2023
+
+Set parameter LogFile to value "SolvingLog.log"
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.2.0 23C5055b)
+
+CPU model: Apple M1
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 267875 rows, 262650 columns and 2285350 nonzeros
+Model fingerprint: 0x047006f3
+Variable types: 2550 continuous, 260100 integer (260100 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+04]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+04]
+Presolve removed 53472 rows and 50497 columns
+Presolve time: 3.91s
+
+Explored 0 nodes (0 simplex iterations) in 4.12 seconds (10.88 work units)
+Thread count was 1 (of 8 available processors)
+
+Solution count 0
+
+Solve interrupted
+Best objective -, best bound -, gap -
+
+Gurobi 11.0.0 (mac64[arm]) logging started Mon Dec  4 12:59:20 2023
+
+Set parameter LogFile to value "SolvingLog.log"
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.2.0 23C5055b)
+
+CPU model: Apple M1
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 267875 rows, 262650 columns and 2285350 nonzeros
+Model fingerprint: 0x047006f3
+Variable types: 2550 continuous, 260100 integer (260100 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+04]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+04]
+Presolve removed 63319 rows and 60344 columns (presolve time = 5s) ...
+Presolve removed 71541 rows and 68566 columns
+Presolve time: 6.21s
+Presolved: 196334 rows, 194084 columns, 1623548 nonzeros
+Variable types: 2300 continuous, 191784 integer (191784 binary)
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Elapsed ordering time = 5s
+Ordering time: 12.64s
+Elapsed ordering time = 14s
+Elapsed ordering time = 19s
+Elapsed ordering time = 20s
+Elapsed ordering time = 27s
+Elapsed ordering time = 30s
+Elapsed ordering time = 34s
+Elapsed ordering time = 35s
+Elapsed ordering time = 42s
+Elapsed ordering time = 45s
+Elapsed ordering time = 51s
+Ordering time: 51.86s
+
+Barrier performed 0 iterations in 61.95 seconds (40.63 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+Concurrent spin time: 31.14s (can be avoided by choosing Method=3)
+
+Solved with dual simplex
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   23067    6.8449621e+02   0.000000e+00   0.000000e+00     62s
+
+Root relaxation: objective 6.844962e+02, 23067 iterations, 54.96 seconds (25.06 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  684.49621    0  174          -  684.49621      -     -   64s
+     0     0  684.49621    0  192          -  684.49621      -     -   64s
+     0     0  684.49621    0  172          -  684.49621      -     -   66s
+     0     0  820.60720    0   78          -  820.60720      -     -   83s
+H    0     0                     945.1787451  820.60720  13.2%     -   85s
+H    0     0                     937.6318332  820.60720  12.5%     -   85s
+     0     0  820.60720    0  112  937.63183  820.60720  12.5%     -   87s
+H    0     0                     828.9368669  820.60720  1.00%     -   88s
+     0     0  820.60720    0   98  828.93687  820.60720  1.00%     -   89s
+     0     0  820.60720    0  153  828.93687  820.60720  1.00%     -   89s
+     0     0     cutoff    0       828.93687  828.93687  0.00%     -   91s
+
+Explored 1 nodes (44268 simplex iterations) in 91.09 seconds (83.89 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 3: 828.937 937.632 945.179 
+
+Optimal solution found (tolerance 1.00e-02)
+Best objective 8.289368669428e+02, best bound 8.289368669428e+02, gap 0.0000%
+
+Gurobi 11.0.0 (mac64[arm]) logging started Mon Dec  4 13:01:46 2023
+
+Set parameter LogFile to value "SolvingLog.log"
+Gurobi Optimizer version 11.0.0 build v11.0.0rc2 (mac64[arm] - Darwin 23.2.0 23C5055b)
+
+CPU model: Apple M1
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 267875 rows, 262650 columns and 2285350 nonzeros
+Model fingerprint: 0x047006f3
+Variable types: 2550 continuous, 260100 integer (260100 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+04]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+04]
+Presolve removed 63319 rows and 60344 columns (presolve time = 5s) ...
+Presolve removed 71541 rows and 68566 columns
+Presolve time: 6.26s
+Presolved: 196334 rows, 194084 columns, 1623548 nonzeros
+Variable types: 2300 continuous, 191784 integer (191784 binary)
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Elapsed ordering time = 5s
+Ordering time: 11.57s
+Elapsed ordering time = 13s
+Elapsed ordering time = 17s
+Elapsed ordering time = 20s
+Elapsed ordering time = 25s
+Elapsed ordering time = 30s
+Elapsed ordering time = 35s
+Elapsed ordering time = 35s
+Elapsed ordering time = 40s
+Elapsed ordering time = 45s
+Elapsed ordering time = 45s
+Elapsed ordering time = 50s
+Elapsed ordering time = 55s
+Elapsed ordering time = 55s
+Ordering time: 55.78s
+
+Barrier performed 0 iterations in 66.05 seconds (40.63 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+Concurrent spin time: 37.01s (can be avoided by choosing Method=3)
+
+Solved with dual simplex
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   23067    6.8449621e+02   0.000000e+00   0.000000e+00     66s
+
+Root relaxation: objective 6.844962e+02, 23067 iterations, 58.80 seconds (25.06 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  684.49621    0  174          -  684.49621      -     -   68s
+     0     0  684.49621    0  192          -  684.49621      -     -   69s
+     0     0  684.49621    0  172          -  684.49621      -     -   70s
+     0     0  820.60720    0   78          -  820.60720      -     -   88s
+H    0     0                     945.1787451  820.60720  13.2%     -   90s
+H    0     0                     937.6318332  820.60720  12.5%     -   91s
+     0     0  820.60720    0  112  937.63183  820.60720  12.5%     -   92s
+H    0     0                     828.9368669  820.60720  1.00%     -   94s
+     0     0  820.60720    0   98  828.93687  820.60720  1.00%     -   94s
+     0     0  820.60720    0  153  828.93687  820.60720  1.00%     -   95s
+     0     0     cutoff    0       828.93687  828.93687  0.00%     -   96s
+
+Explored 1 nodes (44268 simplex iterations) in 96.37 seconds (83.89 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 3: 828.937 937.632 945.179 
+
+Optimal solution found (tolerance 1.00e-02)
+Best objective 8.289368669428e+02, best bound 8.289368669428e+02, gap 0.0000%

@@ -63,7 +63,7 @@ VRP问题基于一个完全有向图 $G=(V,A)$，其中 $V$是点的集合， $A
 ### 目标函数
 
 $$
-{\rm{min}}\quad\ \sum_{k\in K}\sum_{(i,j)\in A}c_{ij}x_{ijk}
+\min \sum_{k\in K}\sum_{(i,j)\in A}c_{ij}x_{ijk}
 \tag{1}
 $$
 

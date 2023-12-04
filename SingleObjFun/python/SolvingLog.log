@@ -64,3 +64,21 @@ Solution count 2: 828.937 1035.98
 
 Optimal solution found (tolerance 1.00e-02)
 Best objective 8.289368669428e+02, best bound 8.266995160779e+02, gap 0.2699%
+
+Gurobi 10.0.3 (mac64[arm]) logging started Tue Nov  7 11:11:18 2023
+
+Set parameter LogFile to value "SolvingLog.log"
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (mac64[arm])
+
+CPU model: Apple M1
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+
+
+Gurobi 10.0.3 (mac64[arm]) logging started Tue Nov  7 11:12:42 2023
+
+Set parameter LogFile to value "SolvingLog.log"
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (mac64[arm])
+
+CPU model: Apple M1
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+
