@@ -43,6 +43,7 @@ v_num = 25
 
 经典VRPTW问题的模型构建，
 请参考[Jean-François Cordeau (2002)](https://doi.org/10.1137/1.9780898718515.ch7);
+
 同时，还参考了微信公众号运小筹的[此篇文章](https://mp.weixin.qq.com/s/tF-ayzjpZfuZvelvItuecw)。
 
 ### 模型符号
@@ -51,13 +52,7 @@ VRP问题基于一个完全有向图 $G=(V,A)$，其中 $V$是点的集合， $A
 
 此外，仓库的时间窗 $[a_0,b_0]=[a_{n+1},b_{n+1}]=[E,L]$是问题中时间的上下界，仓库的需求量为 $0$，仓库的服务时长为 $0$，即 $d_0 = d_{n+1}=s_0=s_{n+1}=0$。
 
-[Jean-François Cordeau (2002)](https://doi.org/10.1137/1.9780898718515.ch7
-        
-        
-        
-        
-        
-        )提出了一些消减不可行弧即保证可行性的方法，
+[Jean-François Cordeau (2002)](https://doi.org/10.1137/1.9780898718515.ch7) 提出了一些消减不可行弧即保证可行性的方法，
 参见其文章的7.2节。
 相同的方法在[Schneider(2016)](https://doi.org/10.1016/j.ejor.2015.09.015
         
