@@ -1,0 +1,78 @@
+
+Gurobi 11.0.2 (mac64[arm]) logging started Sat Sep 14 13:27:49 2024
+
+Set parameter LogFile to value "SolvingLog.log"
+Gurobi Optimizer version 11.0.2 build v11.0.2rc0 (mac64[arm] - Darwin 23.6.0 23G93)
+
+CPU model: Apple M1
+Thread count: 8 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 267875 rows, 262650 columns and 2285350 nonzeros
+Model fingerprint: 0x047006f3
+Variable types: 2550 continuous, 260100 integer (260100 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+04]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+04]
+Presolve removed 63319 rows and 60344 columns (presolve time = 5s) ...
+Presolve removed 71541 rows and 68566 columns
+Presolve time: 6.58s
+Presolved: 196334 rows, 194084 columns, 1623548 nonzeros
+Variable types: 2300 continuous, 191784 integer (191784 binary)
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root barrier log...
+
+Elapsed ordering time = 5s
+Ordering time: 12.81s
+Elapsed ordering time = 14s
+Elapsed ordering time = 15s
+Elapsed ordering time = 20s
+Elapsed ordering time = 25s
+Elapsed ordering time = 28s
+Elapsed ordering time = 30s
+Elapsed ordering time = 37s
+Elapsed ordering time = 40s
+Elapsed ordering time = 46s
+Elapsed ordering time = 50s
+Elapsed ordering time = 56s
+Ordering time: 57.21s
+
+Barrier performed 0 iterations in 68.05 seconds (40.63 work units)
+Barrier solve interrupted - model solved by another algorithm
+
+Concurrent spin time: 37.05s (can be avoided by choosing Method=3)
+
+Solved with dual simplex
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+   23067    6.8449621e+02   0.000000e+00   0.000000e+00     68s
+
+Root relaxation: objective 6.844962e+02, 23067 iterations, 60.56 seconds (25.06 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  684.49621    0  174          -  684.49621      -     -   70s
+     0     0  684.49621    0  192          -  684.49621      -     -   71s
+     0     0  684.49621    0  172          -  684.49621      -     -   72s
+     0     0  820.60720    0   78          -  820.60720      -     -   91s
+H    0     0                     945.1787451  820.60720  13.2%     -   93s
+H    0     0                     937.6318332  820.60720  12.5%     -   93s
+     0     0  820.60720    0  112  937.63183  820.60720  12.5%     -   95s
+H    0     0                     828.9368669  820.60720  1.00%     -   97s
+     0     0  820.60720    0   98  828.93687  820.60720  1.00%     -   97s
+     0     0  820.60720    0  153  828.93687  820.60720  1.00%     -   98s
+     0     0     cutoff    0       828.93687  828.93687  0.00%     -   99s
+
+Explored 1 nodes (44268 simplex iterations) in 99.49 seconds (83.89 work units)
+Thread count was 8 (of 8 available processors)
+
+Solution count 3: 828.937 937.632 945.179 
+
+Optimal solution found (tolerance 1.00e-02)
+Best objective 8.289368669428e+02, best bound 8.289368669428e+02, gap 0.0000%
